@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=El+Messiri:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cal+Sans&family=El+Messiri:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: poppins, 'El Messiri', sans-serif;
+    transition: all 0.3s ease;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: #E4E4E4;
+    transition: all 0.3s ease;
+    user-select: none;
+
+}
+
+
+header {
+    /* background-color: red; */
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    /* padding: 10px 30px; */
+    /* background-color: orange; */
+    height: 12vh;
+}
+
+header h1 {
+    font-size: 30px;
+    color: #242424;
+    font-weight: 700;
+    border: 1px solid #242424;
+    padding: 10px 15px;
+    margin: 10px;
+    border-radius: 30px;
+    box-shadow: 0px 3px 10px -7px #242424;
+    background-color: transparent;
+
+}
+
+header p {
+    /* background-color: red; */
+    color: #242424;
+    font-size: 1.5rem;
+    margin: 0 0 0 20px;
+    font-weight: 600;
+}
+
+main {
+    transition: all 0.3s ease;
+}
+
+.main {
+    /* background-color: red; */
+    height: 88vh;
+    /* display: flex; */
+    margin: 0;
+    /* justify-content: space-between; */
+    padding-top: 50px
+        /* padding-inline: 5%; */
+    ;
+
+    @media (max-width: 960px) {
+        min-height: fit-content;
+        ;
+
+    }
+}
+
+section {
+    display: flex;
+    /* padding: 0px 20px; */
+    justify-content: space-between;
+    /* background-color: red; */
+    padding-inline: 100px;
+
+    @media (max-width: 1120px) {
+        padding-inline: 20px;
+
+    }
+
+    @media (max-width: 960px) {
+        flex-direction: column;
+        align-items: center;
+
+    }
+}
+
+.main-arts {
+    background-color: white;
+    align-items: center;
+    height: 90%;
+    min-width: 180px;
+    /* margin-inline: 60px; */
+    border-radius: 60px;
+    transition: opacity 0.4s, transform 0.4s;
+    opacity: 1;
+    transform: scale(1);
+
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    box-shadow: 0px 3px 12px #5858585f;
+    color: #E4E4E4;
+    text-shadow: 0px 3px 10px #242424;
+
+    @media (max-width: 960px) {
+        width: 100%;
+        margin: 20px;
+        height: 300px;
+        font-size: 3rem;
+    }
+
+    transition: min-width 0.4s, height 0.4s, opacity 0.4s, transform 0.4s;
+    transition: all 0.4s ease;
+    position: relative;
+}
+
+.main-arts:hover {
+    background-color: #242424;
+    color: white;
+    text-shadow: 0px 3px 10px #E4E4E4;
+    filter: saturate(1);
+    cursor: pointer;
+    min-width: 300px;
+}
+
+.main-arts.hide {
+    opacity: 0;
+    transform: scale(0.95);
+    pointer-events: none;
+}
+
+
+
+.main-arts:nth-child(1) {
+    background-image: url("https://txmg.org/hendersonmg/files/2022/05/Chamomile-German-2.jpg");
+    background-position: center;
+    /* filter: saturate(0.4) */
+}
+
+.main-arts:nth-child(2) {
+    background-image: url("https://tabaye.ir/wp-content/uploads/2020/02/نعناع.jpg");
+    background-position: center;
+    /* filter: saturate(0.4) */
+}
+
+.main-arts:nth-child(3) {
+    background-image: url("https://attarineshat.com/wp-content/uploads/2023/10/benefit-ginger-erection.jpg");
+    background-position: center;
+    /* filter: saturate(0.4) */
+}
+
+.main-arts:nth-child(4) {
+    background-image: url("https://chishi.ir/wp-content/uploads/2024/01/tabe-avishan.jpg");
+    background-position: center;
+    /* filter: saturate(0.4) */
+}
+
+.main-arts:nth-child(5) {
+    background-image: url("https://chishi.ir/wp-content/uploads/2023/08/khavas-zardchoobe-nashta.jpg");
+    background-position: center;
+    /* filter: saturate(0.4) */
+}
+
+.main-arts.clicked {
+    min-width: 100%;
+    min-height: fit-content;
+    opacity: 1;
+    background-size: cover;
+    background-position: center;
+    display: block;
+    text-align: right;
+    padding: min(20px, 5%);
+    font-size: clamp(1.5rem, calc(2vw + 1rem), 2rem);
+
+    /* transform: scale(1.05); */
+}
+
+.main-arts::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+    border-radius: inherit;
+    transition: all 0.3s ease;
+
+}
+
+.main-arts:hover::before {
+
+    background-color: rgba(0, 0, 0, 0);
+    box-shadow: 0px 3px 17px #3535356b;
+}
+
+.main-arts.clicked::before {
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+#header.hide {
+    opacity: 0;
+    transform: scale(0.95);
+    pointer-events: none;
+}
+
+#back-button {
+    background-color: #242424;
+    color: white;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 30px;
+    font-size: 1.5rem;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0px 3px 10px #242424b5;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 20px;
+    opacity: 0;
+    pointer-events: none;
+
+}
+
+#back-button:hover {
+    background-color: #89ff91;
+    color: #242424;
+    box-shadow: 0px 3px 10px #E4E4E4;
+    transform: scale(1.05);
+}
+
+#back-button:active {
+    transform: scale(0.95);
+}
+
+#back-button.show {
+    opacity: 1;
+    pointer-events: all;
+}
+
+#back-button.hiden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+
+
+footer {
+    /* height: 7vh; */
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-inline: 20%;
+    /* background-color: blue; */
+}

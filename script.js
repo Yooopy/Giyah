@@ -1,3 +1,19 @@
+const time = document.getElementById("time");
+document.getElementById("time").innerHTML =
+  new Date().getHours() +
+  ":" +
+  new Date().getMinutes() +
+  ":" +
+  new Date().getSeconds();
+setInterval(() => {
+  document.getElementById("time").innerHTML =
+    new Date().getHours() +
+    ":" +
+    new Date().getMinutes() +
+    ":" +
+    new Date().getSeconds();
+}, 1000);
+
 const baboone = document.getElementsByClassName("main-arts")[0];
 const babooneImage = window.getComputedStyle(baboone).backgroundImage;
 
